@@ -26,19 +26,4 @@ Where `[platform]` can be:
 
 `custom` - Skip all specific package installation and tries to install Ensmarteditor assuming your system already has all dependencies met. This option can be useful if you're trying to install OpenPLC on an unsuported Linux platform or had manually installed all the dependency packages before.
 
-### Building, Installing and Running inside Docker
-Make sure [`docker` is installed](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-
-#### Build
-```
-# instead of running install.sh as stated above, run:
-docker build -t openplc:v3 .
-```
-
-#### RUN
-_Devices can be passed to the `docker` daemon using the `-v` flag (e.g. `-v /dev/ttyACM0:/dev/ttyACM0`)_
-
-```bash
-docker run -it --rm --privileged -p 8080:8080 openplc:v3
-```
 
